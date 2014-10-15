@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas</title>
+</head>
+<body>
+	<canvas id="canvas" width="1024" height="600" style="border:1px solid #aaa; display:block; margin:0 auto;"></canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas");
+		var context = canvas.getContext("2d");
+		
+		//使用context绘制
+		for(var i=0;i<10;i++){
+			context.beginPath();
+			context.lineWidth = 2;
+			context.arc(200+i*50,200,20,0,(0.2+0.2*i)*Math.PI,false)
+			context.strokeStyle = "red";
+
+			context.stroke();
+		
+		}
+		
+
+		
+	
+	</script>
+
+	
+</body>
+</html>
